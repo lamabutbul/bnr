@@ -1,0 +1,40 @@
+<h2>Users</h2>
+
+<div table="UsersController.users" table-service="UsersService">
+    <table>
+        <thead>
+            <tr>
+                <th table-select-all></th>
+                <th>#</th>
+                <th table-sort="name"><span translate="user.name"></span></th>
+                <th table-sort="username"><span translate="user.username"></span></th>
+                <th table-sort="email"><span translate="user.email"></span></th>
+                <th table-sort="role_id"><span translate="user.role"></span></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="user in UsersController.users">
+                <td table-select="user.id"></td>
+                <td table-row-number></td>
+                <td>{{ :: user.name }}</td>
+                <td>{{ :: user.username }}</td>
+                <td>{{ :: user.email }}</td>
+                <td>{{ :: user.role.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <i class="fa fa-pencil"></i>
+                            <span translate="user.edit"></span>
+                        </li>
+                        <li>
+                            <i class="fa fa-delete"></i>
+                            <span translate="user.delete"></span>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div table-pagination></div>
+</div>

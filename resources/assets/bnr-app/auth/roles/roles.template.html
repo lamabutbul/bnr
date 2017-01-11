@@ -1,0 +1,38 @@
+<h2>Roles</h2>
+
+<div table="RolesController.roles" table-service="RolesService">
+    <table>
+        <thead>
+            <tr>
+                <th table-select-all></th>
+                <th>#</th>
+                <th table-sort="name"><span translate="role.name"></span></th>
+                <th table-sort="role"><span translate="role.role"></span></th>
+                <th table-sort="description"><span translate="role.description"></span></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="role in RolesController.roles">
+                <td table-select="role.id"></td>
+                <td table-row-number></td>
+                <td>{{ :: role.name }}</td>
+                <td>{{ :: role.role }}</td>
+                <td>{{ :: role.description }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <i class="fa fa-pencil"></i>
+                            <span translate="role.edit"></span>
+                        </li>
+                        <li>
+                            <i class="fa fa-delete"></i>
+                            <span translate="role.delete"></span>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div table-pagination></div>
+</div>

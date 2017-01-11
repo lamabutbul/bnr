@@ -4,13 +4,20 @@
 * PHP 7.1
 * MySQL 5.7
 * Composer
-* NPM
 * Bower
+
+### Dev Prerequisites
+* NPM
+* Gulp
 
 ## Install
 * Install composer dependencies
     ```
     composer install
+    ```
+* Install bower components
+    ```
+    bower install
     ```
 * create .env from .env.example
 * create db and put credentials

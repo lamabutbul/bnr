@@ -1,3 +1,10 @@
 'use strict';
 
-angular.module('bnrApp', []);
+angular.module('bnrApp', [
+    'ui.router',
+    'bnrApp.auth',
+    'bnrApp.catalog',
+])
+.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
+    $urlRouterProvider.otherwise('/');
+}]);
