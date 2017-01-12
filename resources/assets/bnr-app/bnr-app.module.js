@@ -2,6 +2,7 @@
 
 angular.module('bnrApp', [
     'ui.router',
+    'translate',
     'bnrApp.auth',
     'bnrApp.catalog',
 ])

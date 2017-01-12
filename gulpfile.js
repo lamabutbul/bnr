@@ -21,6 +21,10 @@ const jsAssets = [
     './resources/assets/main.js',
 ];
 
+const appHtml = [
+    './resources/assets/**/*.html',
+];
+
 gulp.task('build', function(){
     return es.merge([
         buildVendors(),
@@ -41,7 +45,7 @@ gulp.task('build:app', function(){
 });
 
 gulp.task('watch', function(){
-    gulp.watch(jsAssets, ['build:app']);
+    gulp.watch(jsAssets.concat(appHtml), ['build:app']);
 });
 
 function buildVendors() {

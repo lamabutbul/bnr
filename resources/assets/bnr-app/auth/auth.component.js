@@ -2,6 +2,7 @@
 
 angular.module('bnrApp.auth').component('auth', {
     template: `
+        <h2>Auth</h2>
         <ul>
             <li ui-sref-active="active">
                 <a ui-sref="auth.users" translate="auth.users"></a>

@@ -2,6 +2,7 @@
 
 angular.module('bnrApp.auth.users', [
     'ui.router',
+    'translate',
     'bnrApp.auth.roles',
 ])
 .config(['$stateProvider', function($stateProvider){
